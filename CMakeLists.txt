@@ -5,6 +5,8 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum OS X deployment ta
 
 project(g2o LANGUAGES CXX C)
 
+find_package(ament_cmake REQUIRED)
+
 include(CPack)
 include(GNUInstallDirs)
 
@@ -564,3 +566,6 @@ if(G2O_BUILD_BENCHMARKS)
     message(WARNING "G2O_BUILD_BENCHMARKS was set to true, but the benchmark library cannot be found")
   endif()
 endif()
+
+
+ament_package()
